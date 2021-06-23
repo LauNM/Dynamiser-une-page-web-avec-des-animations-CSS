@@ -1,0 +1,30 @@
+@use "../utils/variables";
+
+footer {
+  padding: 30px;
+  line-height: 2;
+  color: white;
+  font-weight: 500;
+  background-color: variables.$background-footer;
+  svg {
+    width: 125px;
+    height: auto;
+    path {
+      fill: white;
+    }
+  }
+  ul {
+    list-style-type: none;
+    padding:0;
+    li {
+      i.fas{
+        width: 20px;
+        height: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,5 +1,57 @@
-h1 {
-  color: #9356DC;
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  padding: 30px;
+  line-height: 2;
+  color: white;
+  font-weight: 500;
+  background-color: #353535;
+}
+footer svg {
+  width: 125px;
+  height: auto;
+}
+footer svg path {
+  fill: white;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li i.fas {
+  width: 20px;
+  height: 20px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+#presentation {
+  text-align: center;
+}
+#presentation .location {
+  background-color: #EAEAEA;
+  padding: 15px 0;
+  font-weight: 300;
+  box-shadow: 0 5px 5px #cccccc inset;
+}
+#presentation .intro {
+  padding: 15px 0;
+  background-color: #F6F6F6;
+}
+#presentation .intro .home-page-titles {
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

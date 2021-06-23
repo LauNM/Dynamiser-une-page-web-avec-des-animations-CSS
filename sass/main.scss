@@ -1,5 +1,6 @@
-@import "./utils/variables";
+@use "./utils/variables";
+@use "./base/base";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./pages/presentation";
 
-h1 {
-  color: $primary;
-}

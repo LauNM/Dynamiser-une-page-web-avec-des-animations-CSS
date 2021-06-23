@@ -1,0 +1,19 @@
+@use "../utils/variables";
+
+#presentation {
+  text-align: center;
+  .location {
+    background-color: #EAEAEA;
+    padding: 15px 0;
+    font-weight: 300;
+    box-shadow: 0 5px 5px #cccccc inset;
+  }
+  .intro {
+    padding: 15px 0;
+    background-color: #F6F6F6;
+    .home-page-titles {
+      font-size: 25px;
+    }
+  }
+
+}
