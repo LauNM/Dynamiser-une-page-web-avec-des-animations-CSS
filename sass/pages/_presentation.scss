@@ -1,5 +1,6 @@
 @use "../utils/variables";
 
+
 #presentation {
   text-align: center;
   .location {
@@ -15,5 +16,87 @@
       font-size: 25px;
     }
   }
+}
 
+#operation {
+  .operation__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .list-items {
+      text-align: center;
+      background-color: #F6F6F6;
+      border-radius: 30px;
+      margin: 10px 0;
+      padding: 20px 40px;
+      &:nth-child(0n+3) {
+        background-color: #F5EDFF;
+        i {
+          color: variables.$primary;
+        }
+      }
+    }
+  }
+}
+
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EAEAEA;
+  .restaurant-card {
+    width: 90%;
+    margin: 10px 0;
+
+    .card__article{
+      height: 250px;
+      background-color: white;
+      text-decoration: none;
+      box-sizing: content-box;
+      box-shadow: 5px 5px 10px #bababa;
+      border-radius: 20px;
+      overflow:hidden;
+      display: flex;
+      flex-direction: column;
+      picture {
+        width: 100%;
+        height: calc(100% - 90px);
+        img {
+          border-top-left-radius: 16px 16px;
+          border-top-right-radius: 16px 16px;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .card-footer {
+        height: 90px;
+        display: inline-flex;
+        .card-footer__text {
+          padding-left: 15px;
+          padding-bottom: 15px;
+          width: 50%;
+          color: black;
+        }
+        .card-footer__favorite {
+          width: 50%;
+          color: black;
+          .icon {
+            width: 10px;
+            height: 10px;
+            &:after {
+              font-family: "Font Awesome 5 Free", serif;
+              content: "\f004";
+            }
+            &:hover {
+              font-weight: 900;
+              color: variables.$secondary;
+            }
+          }
+
+
+        }
+      }
+    }
+  }
 }
