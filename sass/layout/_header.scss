@@ -1,9 +1,18 @@
 @use "../utils/variables";
 
 header {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  position: relative;
+  height: 64px;
+  background-color: variables.$background-header;
+
   width: 100%;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
+  align-items: center;
+  i {
+    position: absolute;
+    font-size: 20px;
+    left: 15px;
+    bottom: 17px;
+  }
 }

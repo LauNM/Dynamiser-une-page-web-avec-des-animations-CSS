@@ -1,13 +1,13 @@
 @use "../utils/variables";
 
 footer {
-  padding: 30px;
-  line-height: 2;
+  padding: 20px 30px;
+  line-height: 1.5;
   color: white;
   font-weight: 500;
   background-color: variables.$background-footer;
   svg {
-    width: 125px;
+    width: 100px;
     height: auto;
     path {
       fill: white;

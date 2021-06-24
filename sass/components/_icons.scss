@@ -1,4 +1,18 @@
-i.fas{
-  width: 20px;
-  height: 20px;
+@use "../utils/variables";
+i{
+  width: 25px;
+  height: 25px;
+}
+.favorite {
+  width: 60px;
+  line-height: 70px;
+  i {
+    font-size: 22px;
+    &:hover {
+      font-weight: 900;
+      background: -webkit-gradient(linear, left top, left bottom, from(variables.$primary), to(variables.$secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
