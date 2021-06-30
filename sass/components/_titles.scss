@@ -6,3 +6,25 @@
   font-weight: 600;
   margin: 0;
 }
+.menu__main-title {
+  width: calc(100% - 60px);
+  font-family: 'Shrikhand', cursive;
+  font-weight: 500;
+  padding-left: 30px;
+  line-height: 30px;
+}
+
+.menu__header-title {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 19px;
+  border-bottom: 3px solid variables.$ternary;
+  padding-bottom: 5px;
+  width: 50px;
+}
+
+.menu__dish-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}

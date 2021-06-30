@@ -1,24 +1,27 @@
-@use "../components/photo";
 @use "../utils/variables";
+@use "../components/photo";
+@use "../components/dishes";
 
-.menu {
-  background: variables.$background-header;
-  .menu-header {
-    .menu-title{
 
+main {
+  .menu {
+    margin-top: -25px;
+    position: relative;
+    background: variables.$background-header;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    .menu__header {
       display: flex;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
-      h2 {
-        width: calc(100% - 60px);
-        font-family: 'Shrikhand', cursive;
-        font-weight: 500;
-        padding-left: 30px;
-      }
+    }
+    .menu__main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
-
 }
+
 
 
 

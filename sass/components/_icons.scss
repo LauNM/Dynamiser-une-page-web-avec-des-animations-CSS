@@ -1,7 +1,8 @@
 @use "../utils/variables";
 i{
-  width: 25px;
-  height: 25px;
+
+  width: 28px;
+  height: 28px;
 }
 .favorite {
   width: 60px;
@@ -13,6 +14,16 @@ i{
       background: -webkit-gradient(linear, left top, left bottom, from(variables.$primary), to(variables.$secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      &:before {
+        margin-left: 1px;
+        -webkit-text-stroke: 1px transparent;
+      }
     }
+  }
+  .favorite--home-page::before {
+    -webkit-text-stroke: 1px white;
+  }
+  .favorite--menu::before {
+    -webkit-text-stroke: 1px variables.$background-header;
   }
 }
