@@ -25,6 +25,7 @@
 }
 
 #operation {
+  background-color: white;
   padding-bottom: 40px;
   .operation__list {
     display: flex;
@@ -76,7 +77,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .restaurants-card_wrapper {
+      max-width: 600px;
       width: 90%;
       margin: 8px 0;
       .card{

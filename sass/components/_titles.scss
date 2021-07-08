@@ -5,16 +5,23 @@
   font-size: 22px;
   font-weight: 600;
   margin: 0;
+  @media (min-width: 800px) {
+    text-align: center;
+  }
 }
-.menu__main-title {
+.menu__header-title {
   width: calc(100% - 60px);
   font-family: 'Shrikhand', cursive;
   font-weight: 500;
   padding-left: 30px;
   line-height: 30px;
+  @media (min-width: 800px) {
+    text-align: center;
+    font-size: 30px;
+  }
 }
 
-.menu__header-title {
+.menu__main-title {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 19px;

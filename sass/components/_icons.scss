@@ -1,9 +1,9 @@
 @use "../utils/variables";
 i{
-
   width: 28px;
   height: 28px;
 }
+
 .favorite {
   width: 60px;
   line-height: 70px;
@@ -14,7 +14,9 @@ i{
       background: -webkit-gradient(linear, left top, left bottom, from(variables.$primary), to(variables.$secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      &:before {
+      animation: like;
+      animation-duration: 2s;
+      &::before {
         margin-left: 1px;
         -webkit-text-stroke: 1px transparent;
       }
@@ -25,5 +27,20 @@ i{
   }
   .favorite--menu::before {
     -webkit-text-stroke: 1px variables.$background-header;
+  }
+}
+
+@keyframes like {
+
+  0% {
+    opacity: 0.2;
+  }
+
+  25% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

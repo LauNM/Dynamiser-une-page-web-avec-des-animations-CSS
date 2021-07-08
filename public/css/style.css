@@ -26,6 +26,11 @@ footer {
   font-weight: 500;
   background-color: #353535;
 }
+@media screen and (min-width: 800px) {
+  footer {
+    text-align: center;
+  }
+}
 footer svg {
   width: 100px;
   height: auto;
@@ -37,11 +42,6 @@ footer ul li {
   height: 31px;
 }
 
-@media screen and (min-width: 700px) {
-  footer {
-    text-align: center;
-  }
-}
 #presentation {
   text-align: center;
 }
@@ -66,6 +66,7 @@ footer ul li {
 }
 
 #operation {
+  background-color: white;
   padding-bottom: 40px;
 }
 #operation .operation__list {
@@ -120,6 +121,7 @@ footer ul li {
   align-items: center;
 }
 #restaurants .restaurants-card .restaurants-card_wrapper {
+  max-width: 600px;
   width: 90%;
   margin: 8px 0;
 }
@@ -184,12 +186,43 @@ footer ul li {
   height: 100%;
 }
 
-.dishes_part {
-  padding: 20px;
-  width: 1200px;
-  max-width: 90%;
+@keyframes dish-item {
+  0% {
+    opacity: 0;
+    top: 120px;
+  }
+  25% {
+    opacity: 0;
+    top: 120px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
-.dishes_part .dish {
+/* The element to apply the animation to */
+.menu__main .dishes_part {
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+.menu__main .dishes_part:nth-child(1) {
+  animation-name: dish-item;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+.menu__main .dishes_part:nth-child(2) {
+  animation-name: dish-item;
+  animation-duration: 3s;
+  animation-delay: 0.2s;
+}
+.menu__main .dishes_part:nth-child(3) {
+  animation-name: dish-item;
+  animation-duration: 3s;
+  animation-delay: 0.4s;
+}
+.menu__main .dish {
   display: flex;
   height: 70px;
   background: white;
@@ -197,30 +230,50 @@ footer ul li {
   margin: 10px 0;
   box-shadow: 5px 5px 10px #e8e8e8;
 }
-.dishes_part .dish div {
+.menu__main .dish div {
   padding: 10px;
   width: calc(100% - 40px);
   line-height: 1.5;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  cursor: pointer;
 }
-.dishes_part .dish div h4, .dishes_part .dish div p {
+.menu__main .dish div h4, .menu__main .dish div p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.dishes_part .dish div p {
+.menu__main .dish div p {
   margin: 0;
   font-weight: 300;
 }
-.dishes_part .dish .price {
+.menu__main .dish .price {
   display: flex;
   flex-direction: column-reverse;
   width: 40px;
 }
-.dishes_part .dish .price p {
+.menu__main .dish .price p {
   font-weight: 500;
+}
+.menu__main .dish .select {
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.menu__main .dish .select i {
+  font-size: 22px;
+  font-weight: 900;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__main .dish:hover .select {
+  width: 80px;
 }
 
 main .menu {
@@ -267,8 +320,10 @@ i {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: like;
+  animation-duration: 2s;
 }
-.favorite i:hover:before {
+.favorite i:hover::before {
   margin-left: 1px;
   -webkit-text-stroke: 1px transparent;
 }
@@ -279,22 +334,44 @@ i {
   -webkit-text-stroke: 1px #F6F6F6;
 }
 
+@keyframes like {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home-page-titles {
   padding: 50px 15px 10px 15px;
   font-size: 22px;
   font-weight: 600;
   margin: 0;
 }
+@media (min-width: 800px) {
+  .home-page-titles {
+    text-align: center;
+  }
+}
 
-.menu__main-title {
+.menu__header-title {
   width: calc(100% - 60px);
   font-family: "Shrikhand", cursive;
   font-weight: 500;
   padding-left: 30px;
   line-height: 30px;
 }
+@media (min-width: 800px) {
+  .menu__header-title {
+    text-align: center;
+    font-size: 30px;
+  }
+}
 
-.menu__header-title {
+.menu__main-title {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 19px;
@@ -309,7 +386,7 @@ i {
   font-weight: 500;
 }
 
-button.order {
+button.order, div.explore {
   width: 200px;
   font-weight: 500;
   margin: 30px;
@@ -319,10 +396,56 @@ button.order {
   border-radius: 30px;
   cursor: pointer;
   background: linear-gradient(#FF79DA, #9356DC);
+  transition: all 1s;
 }
-button.order:hover {
-  background: linear-gradient(#ff93e1, #a16be0);
+button.order:hover, div.explore:hover {
+  opacity: 0.8;
   box-shadow: 5px 5px 10px #bababa;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes round {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(6);
+  }
+}
+.loading {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  color: #99E2D0;
+  z-index: 999;
+  animation: loader;
+  animation-duration: 3s;
+  top: 0;
+  left: 0;
+  padding: 50vh 50vw;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+.loading .round {
+  width: 1vh;
+  height: 1vh;
+  background-color: #99E2D0;
+  border-radius: 100%;
+  animation: round 500ms linear infinite;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,41 +1,106 @@
 @use "../utils/variables";
+@keyframes dish-item {
 
-.dishes_part {
-  padding: 20px;
-  width: 1200px;
-  max-width: 90%;
-  .dish{
-    display: flex;
-    height: 70px;
-    background: white ;
-    border-radius: 15px;
-    margin: 10px 0;
-    box-shadow: 5px 5px 10px #e8e8e8;
-    div {
-      padding: 10px;
-      width: calc(100% - 40px);
-      line-height: 1.5;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow:ellipsis;
-
-      h4, p {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow:ellipsis;
-      }
-      p{
-        margin: 0;
-        font-weight: 300;
-      }
+    0% {
+      opacity: 0;
+      top: 120px;
     }
-    .price {
+
+    25% {
+      opacity: 0;
+      top: 120px;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+
+}
+
+/* The element to apply the animation to */
+
+.menu__main {
+
+
+  .dishes_part {
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    &:nth-child(1){
+      animation-name: dish-item;
+      animation-duration: 3s;
+      animation-delay: 0s;
+    }
+    &:nth-child(2){
+      animation-name: dish-item;
+      animation-duration: 3s;
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3){
+      animation-name: dish-item;
+      animation-duration: 3s;
+      animation-delay: 0.4s;
+    }
+  }
+    .dish{
+
+
       display: flex;
-      flex-direction: column-reverse;
-      width: 40px;
-      p {
-        font-weight: 500;
+      height: 70px;
+      background: white ;
+      border-radius: 15px;
+      margin: 10px 0;
+      box-shadow: 5px 5px 10px #e8e8e8;
+
+      div {
+        padding: 10px;
+        width: calc(100% - 40px);
+        line-height: 1.5;
+        overflow: hidden;
+        cursor: pointer;
+
+        h4, p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow:ellipsis;
+        }
+        p{
+          margin: 0;
+          font-weight: 300;
+        }
+      }
+      .price {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 40px;
+        p {
+          font-weight: 500;
+        }
+      }
+      .select {
+        background-color: variables.$ternary;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+        i {
+          font-size: 22px;
+          font-weight: 900;
+          background: white;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+      }
+      &:hover .select{
+        width: 80px;
       }
     }
   }
-}
+
