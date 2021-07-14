@@ -1,28 +1,30 @@
 @use "../utils/variables";
 @keyframes dish-item {
-
     0% {
       opacity: 0;
       top: 120px;
     }
-
     25% {
       opacity: 0;
       top: 120px;
     }
-
     100% {
       opacity: 1;
       top: 0;
     }
-
+}
+@keyframes rotate-check {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* The element to apply the animation to */
+
 
 .menu__main {
-
-
   .dishes_part {
     padding: 20px;
     width: 90%;
@@ -45,8 +47,6 @@
     }
   }
     .dish{
-
-
       display: flex;
       height: 70px;
       background: white ;
@@ -85,21 +85,27 @@
         border-bottom-right-radius: 15px;
         width: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 1s;
-        i {
-          font-size: 22px;
-          font-weight: 900;
-          background: white;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
 
+
+        transition: 1s;
+          i {
+            font-size: 22px;
+            margin: 24px 22px;
+            height: 22px;
+            width: 22px;
+            font-weight: 900;
+            background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
       }
       &:hover .select{
         width: 80px;
+        i {
+          animation-name: rotate-check;
+          animation-duration: 500ms;
+          animation-delay: 300ms;
+        }
       }
     }
   }

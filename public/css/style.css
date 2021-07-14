@@ -62,7 +62,6 @@ footer ul li {
   padding: 20px;
   color: white;
   border-radius: 30px;
-  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 #operation {
@@ -73,6 +72,12 @@ footer ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 800px) {
+  #operation .operation__list {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 #operation .operation__list .list-items {
   position: relative;
@@ -85,6 +90,11 @@ footer ul li {
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #bababa;
+}
+@media (min-width: 800px) {
+  #operation .operation__list .list-items {
+    margin: 20px;
+  }
 }
 #operation .operation__list .list-items span {
   position: absolute;
@@ -200,7 +210,14 @@ footer ul li {
     top: 0;
   }
 }
-/* The element to apply the animation to */
+@keyframes rotate-check {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .menu__main .dishes_part {
   padding: 20px;
   width: 90%;
@@ -260,13 +277,13 @@ footer ul li {
   border-bottom-right-radius: 15px;
   width: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: 1s;
 }
 .menu__main .dish .select i {
   font-size: 22px;
+  margin: 24px 22px;
+  height: 22px;
+  width: 22px;
   font-weight: 900;
   background: white;
   -webkit-background-clip: text;
@@ -274,6 +291,11 @@ footer ul li {
 }
 .menu__main .dish:hover .select {
   width: 80px;
+}
+.menu__main .dish:hover .select i {
+  animation-name: rotate-check;
+  animation-duration: 500ms;
+  animation-delay: 300ms;
 }
 
 main .menu {

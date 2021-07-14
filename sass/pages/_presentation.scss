@@ -19,7 +19,6 @@
         padding: 20px;
         color: white;
         border-radius: 30px;
-        background: linear-gradient( variables.$secondary, variables.$primary);
       }
   }
 }
@@ -31,6 +30,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: 800px) {
+      flex-direction: row;
+      justify-content: center;
+    }
     .list-items {
       position: relative;
       margin-bottom: 20px;
@@ -42,6 +45,9 @@
       background-color: variables.$background-header;
       border-radius: 20px;
       box-shadow: 5px 5px 10px #bababa;
+      @media (min-width: 800px) {
+        margin: 20px;
+      }
       span {
         position: absolute;
         right: 95%;
