@@ -253,6 +253,10 @@ footer ul li {
   line-height: 1.5;
   overflow: hidden;
   cursor: pointer;
+  transition: 1s;
+}
+.menu__main .dish div:hover {
+  width: calc(100% - 110px);
 }
 .menu__main .dish div h4, .menu__main .dish div p {
   overflow: hidden;

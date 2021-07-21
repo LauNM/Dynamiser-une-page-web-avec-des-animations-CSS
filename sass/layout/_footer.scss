@@ -9,13 +9,16 @@ footer {
   @media screen and (min-width: 800px) {
     text-align: center;
   }
+
   svg {
     width: 100px;
     height: auto;
+
     path {
       fill: white;
     }
   }
+
   ul {
     li {
       height: 31px;

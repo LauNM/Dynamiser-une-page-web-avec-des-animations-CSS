@@ -1,18 +1,20 @@
 @use "../utils/variables";
+
 @keyframes dish-item {
-    0% {
-      opacity: 0;
-      top: 120px;
-    }
-    25% {
-      opacity: 0;
-      top: 120px;
-    }
-    100% {
-      opacity: 1;
-      top: 0;
-    }
+  0% {
+    opacity: 0;
+    top: 120px;
+  }
+  25% {
+    opacity: 0;
+    top: 120px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
+
 @keyframes rotate-check {
   0% {
     transform: rotate(0);
@@ -23,90 +25,103 @@
 }
 
 
-
 .menu__main {
   .dishes_part {
     padding: 20px;
     width: 90%;
     max-width: 600px;
     position: relative;
-    &:nth-child(1){
+
+    &:nth-child(1) {
       animation-name: dish-item;
       animation-duration: 3s;
       animation-delay: 0s;
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       animation-name: dish-item;
       animation-duration: 3s;
       animation-delay: 0.2s;
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       animation-name: dish-item;
       animation-duration: 3s;
       animation-delay: 0.4s;
     }
   }
-    .dish{
-      display: flex;
-      height: 70px;
-      background: white ;
-      border-radius: 15px;
-      margin: 10px 0;
-      box-shadow: 5px 5px 10px #e8e8e8;
 
-      div {
-        padding: 10px;
-        width: calc(100% - 40px);
-        line-height: 1.5;
+  .dish {
+    display: flex;
+    height: 70px;
+    background: white;
+    border-radius: 15px;
+    margin: 10px 0;
+    box-shadow: 5px 5px 10px #e8e8e8;
+
+    div {
+      padding: 10px;
+      width: calc(100% - 40px);
+      line-height: 1.5;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 1s;
+
+      &:hover {
+        width: calc(100% - 110px);
+      }
+
+      h4, p {
         overflow: hidden;
-        cursor: pointer;
-
-        h4, p {
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow:ellipsis;
-        }
-        p{
-          margin: 0;
-          font-weight: 300;
-        }
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
-      .price {
-        display: flex;
-        flex-direction: column-reverse;
-        width: 40px;
-        p {
-          font-weight: 500;
-        }
-      }
-      .select {
-        background-color: variables.$ternary;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        width: 0;
-        padding: 0;
 
-
-        transition: 1s;
-          i {
-            font-size: 22px;
-            margin: 24px 22px;
-            height: 22px;
-            width: 22px;
-            font-weight: 900;
-            background: white;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
+      p {
+        margin: 0;
+        font-weight: 300;
       }
-      &:hover .select{
-        width: 80px;
-        i {
-          animation-name: rotate-check;
-          animation-duration: 500ms;
-          animation-delay: 300ms;
-        }
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 40px;
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    .select {
+      background-color: variables.$ternary;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      width: 0;
+      padding: 0;
+      transition: 1s;
+
+      i {
+        font-size: 22px;
+        margin: 24px 22px;
+        height: 22px;
+        width: 22px;
+        font-weight: 900;
+        background: white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &:hover .select {
+      width: 80px;
+
+      i {
+        animation-name: rotate-check;
+        animation-duration: 500ms;
+        animation-delay: 300ms;
       }
     }
   }
+}
 

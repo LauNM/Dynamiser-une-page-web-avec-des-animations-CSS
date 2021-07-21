@@ -1,5 +1,6 @@
 @use "../utils/variables";
-i{
+
+i {
   width: 28px;
   height: 28px;
 }
@@ -7,8 +8,10 @@ i{
 .favorite {
   width: 60px;
   line-height: 70px;
+
   i {
     font-size: 22px;
+
     &:hover {
       font-weight: 900;
       background: -webkit-gradient(linear, left top, left bottom, from(variables.$primary), to(variables.$secondary));
@@ -16,15 +19,18 @@ i{
       -webkit-text-fill-color: transparent;
       animation: like;
       animation-duration: 2s;
+
       &::before {
         margin-left: 1px;
         -webkit-text-stroke: 1px transparent;
       }
     }
   }
+
   .favorite--home-page::before {
     -webkit-text-stroke: 1px white;
   }
+
   .favorite--menu::before {
     -webkit-text-stroke: 1px variables.$background-header;
   }

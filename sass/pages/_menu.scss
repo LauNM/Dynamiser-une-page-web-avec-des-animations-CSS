@@ -11,9 +11,11 @@ main {
     width: 100%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+
     .menu__header {
       display: flex;
     }
+
     .menu__main {
       display: flex;
       flex-direction: column;

@@ -1,6 +1,6 @@
 @use "../utils/variables";
 
-button.order, div.explore{
+button.order, div.explore {
   width: 200px;
   font-weight: 500;
   margin: 30px;
@@ -9,8 +9,9 @@ button.order, div.explore{
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  background: linear-gradient( variables.$secondary, variables.$primary);
+  background: linear-gradient(variables.$secondary, variables.$primary);
   transition: all 1s;
+
   &:hover {
     opacity: 0.8;
     box-shadow: 5px 5px 10px #bababa;
