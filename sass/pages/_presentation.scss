@@ -6,20 +6,26 @@
 
   .location {
     background-color: #EAEAEA;
-    padding: 15px 0;
+    padding-top: 25px;
     font-weight: 300;
     box-shadow: 0 5px 5px #cccccc inset;
   }
 
   .intro {
-    padding: 15px 0 60px 0;
+    padding: 0 10px 60px 10px;
     background-color: variables.$background-header;
 
+    .subtitle {
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
     div, a {
       width: 200px;
+      font-size: 17px;
       font-weight: 500;
       margin: auto;
-      padding: 20px;
       color: white;
       border-radius: 30px;
     }
@@ -29,12 +35,14 @@
 #operation {
   background-color: white;
   padding-bottom: 40px;
+  width: 90%;
+  margin: auto;
 
   .operation__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (min-width: 800px) {
+    @media (min-width: 995px) {
       flex-direction: row;
       justify-content: center;
     }
@@ -42,7 +50,7 @@
     .list-items {
       position: relative;
       margin-bottom: 20px;
-      width: 280px;
+      width: 300px;
       height: 60px;
       display: inline-flex;
       align-items: center;
@@ -50,7 +58,7 @@
       background-color: variables.$background-header;
       border-radius: 20px;
       box-shadow: 5px 5px 10px #bababa;
-      @media (min-width: 800px) {
+      @media (min-width: 995px) {
         margin: 20px;
       }
 
@@ -89,70 +97,74 @@
 #restaurants {
   background-color: variables.$background-header;
   padding-bottom: 50px;
+  .restaurants-wrapper {
+    width: 90%;
+    margin: auto;
 
-  .restaurants-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .restaurants-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    .restaurants-card_wrapper {
-      max-width: 600px;
-      width: 90%;
-      margin: 8px 0;
+      .restaurants-card_wrapper {
+        max-width: 600px;
+        width: 100%;
+        margin: 8px 0;
 
-      .card {
-        position: relative;
-        height: 215px;
-        background-color: white;
-        text-decoration: none;
-        box-sizing: content-box;
-        box-shadow: 5px 5px 10px #bababa;
-        border-radius: 15px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-
-        .new-restaurant {
-          position: absolute;
-          font-weight: 500;
-          z-index: 2;
-          padding: 7px 15px;
-          top: 10px;
-          right: 10px;
-          border-radius: 5px;
-          background: variables.$ternary;
-          color: darken(variables.$ternary, 40%);
-        }
-
-        .card__main {
-          width: 100%;
-          height: calc(100% - 70px);
-
-          img {
-            border-top-left-radius: 16px 16px;
-            border-top-right-radius: 16px 16px;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-          }
-        }
-
-        .card__footer {
-          height: 70px;
+        .card {
+          position: relative;
+          height: 215px;
+          background-color: white;
+          text-decoration: none;
+          box-sizing: content-box;
+          box-shadow: 5px 5px 10px #bababa;
+          border-radius: 15px;
+          overflow: hidden;
           display: flex;
+          flex-direction: column;
 
-          .card__footer_text {
-            padding-top: 10px;
-            line-height: 25px;
-            padding-left: 15px;
-            width: calc(100% - 60px);
+          .new-restaurant {
+            position: absolute;
+            font-weight: 500;
+            z-index: 2;
+            padding: 7px 15px;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            background: variables.$ternary;
+            color: darken(variables.$ternary, 40%);
+          }
 
-            p, h3 {
-              margin: 0;
+          .card__main {
+            width: 100%;
+            height: calc(100% - 70px);
+
+            img {
+              border-top-left-radius: 16px 16px;
+              border-top-right-radius: 16px 16px;
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
             }
+          }
 
-            p {
-              font-weight: 300;
+          .card__footer {
+            height: 70px;
+            display: flex;
+
+            .card__footer_text {
+              padding-top: 10px;
+              line-height: 25px;
+              padding-left: 15px;
+              width: calc(100% - 60px);
+
+              p, h3 {
+                margin: 0;
+              }
+
+              p {
+                font-weight: 300;
+              }
             }
           }
         }

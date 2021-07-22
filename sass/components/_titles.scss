@@ -1,7 +1,16 @@
 @use "../utils/variables";
 
+.home-page-principal-title {
+  padding: 35px 40px 10px 40px;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  @media (min-width: 800px) {
+    text-align: center;
+  }
+}
 .home-page-titles {
-  padding: 50px 15px 10px 15px;
+  padding: 35px 0 25px 0;
   font-size: 22px;
   font-weight: 600;
   margin: 0;
