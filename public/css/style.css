@@ -219,7 +219,6 @@ footer ul li {
   }
 }
 .menu__main .dishes_part {
-  padding: 20px;
   width: 90%;
   max-width: 600px;
   position: relative;
@@ -249,14 +248,13 @@ footer ul li {
 }
 .menu__main .dish div {
   padding: 10px;
-  width: calc(100% - 40px);
   line-height: 1.5;
   overflow: hidden;
   cursor: pointer;
   transition: 1s;
 }
-.menu__main .dish div:hover {
-  width: calc(100% - 110px);
+.menu__main .dish div.description {
+  width: calc(100% - 40px);
 }
 .menu__main .dish div h4, .menu__main .dish div p {
   overflow: hidden;
@@ -293,8 +291,11 @@ footer ul li {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.menu__main .dish:hover .description {
+  width: calc(100% - 130px);
+}
 .menu__main .dish:hover .select {
-  width: 80px;
+  width: 70px;
 }
 .menu__main .dish:hover .select i {
   animation-name: rotate-check;

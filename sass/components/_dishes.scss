@@ -24,10 +24,8 @@
   }
 }
 
-
 .menu__main {
   .dishes_part {
-    padding: 20px;
     width: 90%;
     max-width: 600px;
     position: relative;
@@ -61,14 +59,14 @@
 
     div {
       padding: 10px;
-      width: calc(100% - 40px);
+
       line-height: 1.5;
       overflow: hidden;
       cursor: pointer;
       transition: 1s;
 
-      &:hover {
-        width: calc(100% - 110px);
+      &.description {
+        width: calc(100% - 40px);
       }
 
       h4, p {
@@ -113,13 +111,19 @@
       }
     }
 
-    &:hover .select {
-      width: 80px;
+    &:hover {
+      .description {
+        width: calc(100% - 130px);
+      }
 
-      i {
-        animation-name: rotate-check;
-        animation-duration: 500ms;
-        animation-delay: 300ms;
+      .select {
+        width: 70px;
+
+        i {
+          animation-name: rotate-check;
+          animation-duration: 500ms;
+          animation-delay: 300ms;
+        }
       }
     }
   }
